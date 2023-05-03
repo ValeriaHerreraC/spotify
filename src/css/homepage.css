@@ -1,0 +1,145 @@
+body{
+    background-color: #1e1e1e;
+}
+
+.divpage{
+    display: flex;
+}
+
+.lateralbar {
+    background-color: #000000;
+    width: 22%;
+    height: 100vh;
+    position: fixed;
+}
+
+.leftside{
+    width: 30%;
+}
+
+.spotHP{
+    width: 160px;
+    margin: 28px 0 30px 22px;
+}
+
+.casa{
+    width: 33px;
+    height: 33px;
+}
+
+
+.lupa{  
+    filter: invert(1.4) sepia(1) hue-rotate(-181deg) saturate(463%);
+    width: 33px;
+    height: 33px;
+}
+
+.menu{
+    margin: 20px 0 0 15px;
+    display: flex;
+
+}
+
+.menu:focus{
+    filter: brightness(1.5deg);
+}
+
+.textmen{
+    color: white;
+    margin-left: 15px;
+    font-size: 19px;
+    margin-top: 5px;
+    
+}
+
+.as{
+    text-decoration: none;
+}
+
+.favmen{
+    display: flex;
+    margin: 90px 0 0 15px;
+}
+
+.favourites{
+    width: 32px;
+    height: 32px;
+}
+
+.lineamen{
+    width: 86%;
+    height: 20px;
+    margin-left: 14px;
+    margin-top: 12px;
+}
+
+.flechamen{
+    filter: invert(1.4) sepia(1) hue-rotate(-181deg) saturate(463%);
+    width: 33px;
+    height: 33px;
+}
+
+.downloadmen{
+    position:relative;
+    
+}
+
+.down{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+    display: flex;
+}
+
+.principalPag{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.userName{
+    position: absolute;
+    width: 15%;
+    height: 51px;
+    background-color: #000000;
+    right: 41px;
+    top: 16px;
+    border-radius: 62px;
+    padding-left: 1px;
+}
+
+.userPhoto{
+    width: 50px;
+    filter: invert(0.4) brightness(0.9);
+}
+
+.card{
+    width: 24%;
+    background-color: #181818;
+    box-shadow: 6px 6px 5px #161616;
+    margin: auto;
+    border-radius: 8px;
+}
+
+.imagen{
+    width: 85%;
+    margin: auto;
+    margin-top: 12px;
+    border-radius: 6px;
+}
+
+.titulosong{
+    font-size: 22px;
+    color: white;
+    font-weight: 700;
+}
+.cantante{
+    font-size: 18px;
+    color: #9d9d9d;
+}
+
+.topBar{
+    position: fixed;
+    top: 5px;
+    left: 30%;
+}
