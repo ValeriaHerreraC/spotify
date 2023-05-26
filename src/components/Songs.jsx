@@ -1,35 +1,47 @@
-import { useEffect, useState } from "react";
-import { Albums } from "./Albums";
+import { useState } from "react";
+import SpotifyPlayer from 'react-spotify-web-playback';
+import { useData } from "../context/AuthContext";
+
+
 
 export const Songs = () => {
-  const [data, setData] = useState([]);
+  //const [data, setData] = useState([]);
 
-  /*useEffect(() => {
+  /* useEffect(() => {
     fetch('https://discoveryprovider.audius.co/v1/tracks/trending?app_name=ExampleApp')
     .then(async(response) => {
       const result = await response.json()
       setData(result.data)
+      console.log( "data", result.data)
     })
-  }, []); */
+  }, []);   */
 
-  useEffect(() => {
-    const token = 'AQBXFh7S87PrZzya2ijHC_vXCBC0lb78aMRxLq9hxW53i-7l40x_qztW9E6Xai7jI4zRzkzlFo_1WG020b_ujIkdqEePr9kNB4iOP990vGwOGN6YEpBKtbrrdBR3ycCr4NV5gPbnqe8MNjQFWMcTNWwCGukaEHFDBTRlJ7oEcQrYG1LNmqbiJq7xTh9WOrxahrLJ32bXIgpadts';
-  async function fetchWebApi() {
-    const res = await fetch(`https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-      method: 'GET',
-    });
-    console.log (await res.json())
-  
-  }
-  fetchWebApi()
-  }, []);
+  const {data, token} = useData()
 
+  const [current_track, setTrack] = useState();
+  const tokenPlayer = window.location.hash.replace("#","").split('&')[0].replace("access_token=", "");
+ 
   return (
-    <>
-      <Albums data={data} />
-    </>
+    <div className="cardPadre">
+        {data?.map((song) => (
+          <div key={song.id} className="card">
+            <img src={song.album.images[1].url}  className="card-img-top imagen" alt={song.name}/>
+            <div className="card-body" onClick={() => setTrack(track)}>
+              <h2 className="card-text titulosong">{song.name}</h2>
+              <p className='card-text artista'>{song.artists[0].name}</p>
+              <button className="botonPlay" onClick={() => setTrack(song)}>
+                <img className="imagenPlay" src="./public/play2.png"/>
+              </button>
+            </div>
+          </div>
+        ))}
+      <div className="reproductor">
+        { token && current_track &&
+        <SpotifyPlayer
+          token={tokenPlayer}
+          uris={[`${current_track.album.uri}`]}
+        /> }
+      </div>
+    </div>
   );
 };

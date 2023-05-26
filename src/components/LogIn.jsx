@@ -1,22 +1,32 @@
 import { Link } from "react-router-dom";
 import "../css/login.css"
-import { useEffect } from "react";
 
-//11dFghVXANMlKmJXsNCbNl
-//21f42fbf5c894f99973b9ebeea4ea41c - client id
-//48bf04a0daa84b0683cce81fd7b194c2 - client secret
-//https://api.spotify.com/v1/tracks/{id}
-//https://api.spotify.com.
 export function LogIn() {
   // Authorization token that must have been created previously. See : https://developer.spotify.com/documentation/web-api/concepts/authorization
 
+  var spotify_client_id = '21f42fbf5c894f99973b9ebeea4ea41c';
+  var spotify_client_secret = '48bf04a0daa84b0683cce81fd7b194c2';
 
+  const body = {
+    grant_type: 'client_credentials',
+    client_id: spotify_client_id,
+    client_secret: spotify_client_secret,
+  }
+  
+  const headers = {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  };
+  
+  const redirectUri = 'http://localhost:5173';
+  const scopesSpotify = ['streaming', 'user-read-email', 'user-read-private', 'user-read-playback-state', 'user-modify-playback-state', 'user-library-read', 'user-library-modify'];
+  const endpoint = 'https://accounts.spotify.com/authorize';
+  const loginUrl = `${endpoint}?client_id=${spotify_client_id}&redirect_uri=${redirectUri}&response_type=token&show_dialog=true&scope=${scopesSpotify.join("%20")}`;
+  
 
 
 const handleSubmit = (event)=>{
   event.preventDefault ()
 }
-
 
   return (
 
@@ -32,8 +42,8 @@ const handleSubmit = (event)=>{
           <input type="password" className="form-control inputcolor" id="floatingPassword" placeholder="Password"/>
           <label htmlFor="floatingPassword">Password</label>
         </div>
-        <Link to="/homepage">
-          <input type="submit" href="" className="btn" value="Log In"></input>
+        <Link to="/homePage">
+          <a href={loginUrl}>Acceder a Spotify</a>
         </Link>
       </form>
       <div className="orbox">
@@ -44,11 +54,9 @@ const handleSubmit = (event)=>{
         <img className="line l2" src="./public/linea.png"/>
       </div>
       <Link to="/register">
-        <a className="register" href="/register">
-          <div className="btn2">
+          <div className="btn2 register">
           Register
           </div>
-        </a>
       </Link>
     </div>
     

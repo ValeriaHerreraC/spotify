@@ -1,9 +1,8 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyAuDlzhr_PtIoFV2LGauedziSGejS3wLzs",
-    authDomain: "spotify-7fd01.firebaseapp.com",
-    projectId: "spotify-7fd01",
-    storageBucket: "spotify-7fd01.appspot.com",
-    messagingSenderId: "695161861742",
-    appId: "1:695161861742:web:794f9e8e41b0d8d1d2d87f"
-  };
-  
+export const firebaseConfig = {
+  apiKey: "AIzaSyBa58Ixz4hqH7xRZgwEuTc_xvWg8qijIaY",
+  authDomain: "spotify-55769.firebaseapp.com",
+  projectId: "spotify-55769",
+  storageBucket: "spotify-55769.appspot.com",
+  messagingSenderId: "951223346489",
+  appId: "1:951223346489:web:cbd4c0b093e84ea20e34e8"
+};

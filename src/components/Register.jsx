@@ -1,33 +1,63 @@
+import { useState } from "react";
+import { dataBase} from "../firebase";
+import { ref, onValue } from 'firebase/database'
+
+import { useNavigate } from "react-router-dom";
+
 import "../css/register.css"
-import { Link } from "react-router-dom";
 
 export function Register() {
-    const handleSubmit = (event)=>{
-        event.preventDefault ()
+    const [state, setState] = useState({})
+    const navigate = useNavigate()
+
+    const algo = onValue(ref(dataBase, 'users'), (snapshot) => {
+      const data = snapshot.val()
+      console.log(data)
+    })
+
+    
+    const handleSubmit = (event)=> {
+      event.preventDefault()
+      try {
+        addUser(state)
+        if (addUser(state)) {
+          alert("Registro exitoso!")
+          navigate("/")                                                                                                                                                                         
+        } else {
+          alert("ha ocurrido un error")
+        }
+      } catch (error) {
+        console.log(error.message)
+      }
+    }
+    
+    const handleChange = (event) => {
+      setState({
+        ...state,
+        [event.target.name]: event.target.value
+      })
     }
   return (
     <div className="registerc">
         <h2 className="title2">Register your new spotify account</h2>  
-        <form onSubmit={handleSubmit}>
+        <form id="register" onSubmit={handleSubmit}>
             <div className="form-floating mb-3 input">
-                <input type="text" className="form-control inputcolor" id="floatingInput" placeholder="name"/>
-                <label htmlFor="floatingInput">Full Name</label>
+                <input required type="text" className="form-control inputcolor"  placeholder="name" name="name" onChange={handleChange}/>
+                <label htmlFor="name">Full Name</label>
             </div>
             <div className="form-floating mb-3 input">
-                <input type="text" className="form-control inputcolor" id="floatingInput" placeholder="username"/>
-                <label htmlFor="floatingInput">Username</label>
+                <input required type="text" className="form-control inputcolor"  placeholder="username" name="username" onChange={handleChange}/>
+                <label htmlFor="username">Username</label>
             </div>
             <div className="form-floating mb-3 input">
-                <input type="email" className="form-control inputcolor" id="floatingInput" placeholder="name@example.com"/>
-                <label htmlFor="floatingInput">Email Address</label>
+                <input required type="email" className="form-control inputcolor"  placeholder="name@example.com" name="email" onChange={handleChange}/>
+                <label htmlFor="email">Email Address</label>
             </div>
             <div className="form-floating input">
-                <input type="password" className="form-control inputcolor" id="floatingPassword" placeholder="Password"/>
-                <label htmlFor="floatingPassword">Password</label>
+                <input required type="password" className="form-control inputcolor" placeholder="Password" name="password" minLength={5} onChange={handleChange}/>
+                <label htmlFor="password">Password</label>
             </div>
-            <Link to="/">
-                <input className="btn22" type="submit" value="Submit"></input>
-            </Link>
+            <input className="btn22" type="submit" value="Submit" />
         </form>
     </div>
   )

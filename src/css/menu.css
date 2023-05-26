@@ -1,0 +1,12 @@
+.mainContainer{
+  display: flex;
+}
+
+.leftside{
+  width: 30%;
+}
+.pageContainer{
+  background-color: #121212;
+  width: 100vw;
+  height: 100vh;
+}

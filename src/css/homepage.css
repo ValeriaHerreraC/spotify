@@ -1,21 +1,19 @@
-body{
-    background-color: #1e1e1e;
-}
 
 .divpage{
     display: flex;
+    background-color:#121212;
+    width: 100%;
+    height: 100vh;
 }
 
 .lateralbar {
     background-color: #000000;
-    width: 22%;
+    width: 25%;
     height: 100vh;
     position: fixed;
 }
 
-.leftside{
-    width: 30%;
-}
+
 
 .spotHP{
     width: 160px;
@@ -86,7 +84,7 @@ body{
 
 .down{
     position: absolute;
-    top: 200px;
+    bottom: -295px;
     left: 20px;
     display: flex;
 }
@@ -99,13 +97,14 @@ body{
 }
 .userName{
     position: absolute;
-    width: 15%;
+    width: 14%;
     height: 51px;
     background-color: #000000;
     right: 41px;
     top: 16px;
     border-radius: 62px;
     padding-left: 1px;
+    display: flex;
 }
 
 .userPhoto{
@@ -113,10 +112,19 @@ body{
     filter: invert(0.4) brightness(0.9);
 }
 
+.login{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 10px 10px;
+}
+
 .card{
-    width: 24%;
+    width: 28%;
     background-color: #181818;
-    box-shadow: 6px 6px 5px #161616;
+    box-shadow: 6px 6px 5px #0e0d0d;
     margin: auto;
     border-radius: 8px;
 }
@@ -143,3 +151,140 @@ body{
     top: 5px;
     left: 30%;
 }
+
+.saludo{
+    margin: 33px;
+    width: 80%;
+}
+.textoSaludo{
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+
+.cardPadre{
+    width: 100%;
+    display: flex;
+    margin-top: -300px;
+}
+.artista{
+    font-size: 19px;
+    color: #858585d6;
+    font-weight: 600;
+}
+
+.botonPlay{
+    width: 50px;
+    height: 50px;
+    background-color: #1ed760;
+    border: none;
+    border-radius: 35px;
+}
+.imagenPlay{
+    width: 21px;
+    margin-top: -4px;
+    margin-left: 4px;
+}
+.botonPlay:hover{
+    transform: scale(1.15);
+    transition: 300ms;
+}
+
+.card:hover{
+    background-color: #1f1f1f;
+    transition: 300ms;
+}
+
+.reproductor{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 78%;
+}
+
+.PlayerRSWP{
+    background-color: #000000;
+}
+
+SpotifyPlayer{
+    width: 78%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: black;
+}
+
+.menuMobile{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .userName{
+        position: absolute;
+        left: 14px;
+        top: 33px;
+        width: 13%;
+    }
+    .userName .login{
+        display: none;
+    }
+    .spotHP{
+        display: none;
+    }
+    .lateralbar{
+        display: none;
+    }
+    .menuMobile{
+        display: flex;
+        width: 100vh;
+        height: 80px;
+        background-color: black;
+        position: fixed;
+        bottom: 0;
+    }
+
+    .menuMobile .menu{
+        display: initial;
+    }
+    .casa{
+        position: absolute;
+        top: 12px;
+        left: 100px;
+    }
+    .lupa{
+        position: absolute;
+        top: 12px;
+        left: 244px;
+    }
+    .t1{
+        position: absolute;
+        top: 42px;
+        left: 80px;
+        font-size: 16px;
+    }
+    .t2{
+        position: absolute;
+        top: 42px;
+        left: 223px;
+        font-size: 16px;
+    }
+    .saludo{
+        position: absolute;
+        top: 2px;
+        left: 44px;
+    }
+    .saludo .h2 {
+        font-size: 31px;
+    }
+    .cardPadre{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .botonPlay{
+        display: none;
+    }
+
+
+  }
+
