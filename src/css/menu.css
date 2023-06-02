@@ -1,12 +1,20 @@
-.mainContainer{
+.mainContainer {
   display: flex;
+  width: 100%;
+  background-color: #121212;
+  height: 100vh;
+  gap: 5px;
 }
 
-.leftside{
-  width: 30%;
-}
-.pageContainer{
-  background-color: #121212;
-  width: 100vw;
+.lateralBar {
+  background-color: #000000;
+  width: 20%;
   height: 100vh;
+}
+
+.pageContainer {
+  width: 80%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 10px;
 }

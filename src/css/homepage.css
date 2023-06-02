@@ -1,290 +1,279 @@
-
-.divpage{
-    display: flex;
-    background-color:#121212;
-    width: 100%;
-    height: 100vh;
+.divpage {
+  display: flex;
+  width: 100%;
+  height: 100vh;
 }
 
 .lateralbar {
-    background-color: #000000;
-    width: 25%;
-    height: 100vh;
-    position: fixed;
+  background-color: #000000;
+  width: 25%;
+  height: 100vh;
+  position: fixed;
 }
 
-
-
-.spotHP{
-    width: 160px;
-    margin: 28px 0 30px 22px;
+.spotHP {
+  width: 160px;
+  margin: 28px 0 30px 22px;
 }
 
-.casa{
-    width: 33px;
-    height: 33px;
+.casa {
+  width: 33px;
+  height: 33px;
 }
 
-
-.lupa{  
-    filter: invert(1.4) sepia(1) hue-rotate(-181deg) saturate(463%);
-    width: 33px;
-    height: 33px;
+.lupa {
+  filter: invert(1.4) sepia(1) hue-rotate(-181deg) saturate(463%);
+  width: 33px;
+  height: 33px;
 }
 
-.menu{
-    margin: 20px 0 0 15px;
-    display: flex;
-
+.menu {
+  margin: 20px 0 0 15px;
+  display: flex;
 }
 
-.menu:focus{
-    filter: brightness(1.5deg);
+.menu:focus {
+  filter: brightness(1.5deg);
 }
 
-.textmen{
-    color: white;
-    margin-left: 15px;
-    font-size: 19px;
-    margin-top: 5px;
-    
+.textmen {
+  color: white;
+  margin-left: 15px;
+  font-size: 19px;
+  margin-top: 5px;
 }
 
-.as{
-    text-decoration: none;
+.as {
+  text-decoration: none;
 }
 
-.favmen{
-    display: flex;
-    margin: 90px 0 0 15px;
+.favmen {
+  display: flex;
+  margin: 90px 0 0 15px;
 }
 
-.favourites{
-    width: 32px;
-    height: 32px;
+.favourites {
+  width: 32px;
+  height: 32px;
 }
 
-.lineamen{
-    width: 86%;
-    height: 20px;
-    margin-left: 14px;
-    margin-top: 12px;
+.lineamen {
+  width: 86%;
+  height: 20px;
+  margin-left: 14px;
+  margin-top: 12px;
 }
 
-.flechamen{
-    filter: invert(1.4) sepia(1) hue-rotate(-181deg) saturate(463%);
-    width: 33px;
-    height: 33px;
+.flechamen {
+  filter: invert(1.4) sepia(1) hue-rotate(-181deg) saturate(463%);
+  width: 33px;
+  height: 33px;
 }
 
-.downloadmen{
-    position:relative;
-    
+.downloadmen {
+  position: relative;
 }
 
-.down{
-    position: absolute;
-    bottom: -295px;
-    left: 20px;
-    display: flex;
+.down {
+  position: absolute;
+  bottom: -295px;
+  left: 20px;
+  display: flex;
 }
 
-.principalPag{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+.principalPag {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.userName{
-    position: absolute;
-    width: 14%;
-    height: 51px;
-    background-color: #000000;
-    right: 41px;
-    top: 16px;
-    border-radius: 62px;
-    padding-left: 1px;
-    display: flex;
-}
-
-.userPhoto{
-    width: 50px;
-    filter: invert(0.4) brightness(0.9);
+.userName {
+  position: absolute;
+  width: 14%;
+  height: 51px;
+  background-color: #000000;
+  right: 41px;
+  top: 16px;
+  border-radius: 62px;
+  padding-left: 1px;
+  display: flex;
 }
 
-.login{
-    text-decoration: none;
-    color: white;
-    margin-left: 10px;
-    font-size: 22px;
-    font-weight: 700;
-    padding: 10px 10px;
+.userPhoto {
+  width: 50px;
+  filter: invert(0.4) brightness(0.9);
 }
 
-.card{
-    width: 28%;
-    background-color: #181818;
-    box-shadow: 6px 6px 5px #0e0d0d;
-    margin: auto;
-    border-radius: 8px;
+.login {
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 10px 10px;
 }
 
-.imagen{
-    width: 85%;
-    margin: auto;
-    margin-top: 12px;
-    border-radius: 6px;
+.card {
+  width: 28%;
+  background-color: #181818;
+  box-shadow: 6px 6px 5px #0e0d0d;
+  margin: auto;
+  border-radius: 8px;
 }
 
-.titulosong{
-    font-size: 22px;
-    color: white;
-    font-weight: 700;
-}
-.cantante{
-    font-size: 18px;
-    color: #9d9d9d;
+.imagen {
+  width: 85%;
+  margin: auto;
+  margin-top: 12px;
+  border-radius: 6px;
 }
 
-.topBar{
-    position: fixed;
-    top: 5px;
-    left: 30%;
+.titulosong {
+  font-size: 22px;
+  color: white;
+  font-weight: 700;
+}
+.cantante {
+  font-size: 18px;
+  color: #9d9d9d;
 }
 
-.saludo{
-    margin: 33px;
-    width: 80%;
-}
-.textoSaludo{
-    font-size: 35px;
-    font-weight: 700;
-    color: white;
+.topBar {
+  position: fixed;
+  top: 5px;
+  left: 30%;
 }
 
-.cardPadre{
-    width: 100%;
-    display: flex;
-    margin-top: -300px;
+.saludo {
+  margin: 33px;
+  width: 80%;
 }
-.artista{
-    font-size: 19px;
-    color: #858585d6;
-    font-weight: 600;
-}
-
-.botonPlay{
-    width: 50px;
-    height: 50px;
-    background-color: #1ed760;
-    border: none;
-    border-radius: 35px;
-}
-.imagenPlay{
-    width: 21px;
-    margin-top: -4px;
-    margin-left: 4px;
-}
-.botonPlay:hover{
-    transform: scale(1.15);
-    transition: 300ms;
+.textoSaludo {
+  font-size: 35px;
+  font-weight: 700;
+  color: white;
 }
 
-.card:hover{
-    background-color: #1f1f1f;
-    transition: 300ms;
+.cardPadre {
+  width: 100%;
+  display: flex;
+  margin-top: -300px;
+}
+.artista {
+  font-size: 19px;
+  color: #858585d6;
+  font-weight: 600;
 }
 
-.reproductor{
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    width: 78%;
+.botonPlay {
+  width: 50px;
+  height: 50px;
+  background-color: #1ed760;
+  border: none;
+  border-radius: 35px;
+}
+.imagenPlay {
+  width: 21px;
+  margin-top: -4px;
+  margin-left: 4px;
+}
+.botonPlay:hover {
+  transform: scale(1.15);
+  transition: 300ms;
 }
 
-.PlayerRSWP{
-    background-color: #000000;
+.card:hover {
+  background-color: #1f1f1f;
+  transition: 300ms;
 }
 
-SpotifyPlayer{
-    width: 78%;
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    background-color: black;
+.reproductor {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 78%;
 }
 
-.menuMobile{
-    display: none;
+.PlayerRSWP {
+  background-color: #000000;
+}
+
+SpotifyPlayer {
+  width: 78%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  background-color: black;
+}
+
+.menuMobile {
+  display: none;
 }
 
 @media only screen and (max-width: 600px) {
-    .userName{
-        position: absolute;
-        left: 14px;
-        top: 33px;
-        width: 13%;
-    }
-    .userName .login{
-        display: none;
-    }
-    .spotHP{
-        display: none;
-    }
-    .lateralbar{
-        display: none;
-    }
-    .menuMobile{
-        display: flex;
-        width: 100vh;
-        height: 80px;
-        background-color: black;
-        position: fixed;
-        bottom: 0;
-    }
-
-    .menuMobile .menu{
-        display: initial;
-    }
-    .casa{
-        position: absolute;
-        top: 12px;
-        left: 100px;
-    }
-    .lupa{
-        position: absolute;
-        top: 12px;
-        left: 244px;
-    }
-    .t1{
-        position: absolute;
-        top: 42px;
-        left: 80px;
-        font-size: 16px;
-    }
-    .t2{
-        position: absolute;
-        top: 42px;
-        left: 223px;
-        font-size: 16px;
-    }
-    .saludo{
-        position: absolute;
-        top: 2px;
-        left: 44px;
-    }
-    .saludo .h2 {
-        font-size: 31px;
-    }
-    .cardPadre{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-    .botonPlay{
-        display: none;
-    }
-
-
+  .userName {
+    position: absolute;
+    left: 14px;
+    top: 33px;
+    width: 13%;
+  }
+  .userName .login {
+    display: none;
+  }
+  .spotHP {
+    display: none;
+  }
+  .lateralbar {
+    display: none;
+  }
+  .menuMobile {
+    display: flex;
+    width: 100vh;
+    height: 80px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
   }
 
+  .menuMobile .menu {
+    display: initial;
+  }
+  .casa {
+    position: absolute;
+    top: 12px;
+    left: 100px;
+  }
+  .lupa {
+    position: absolute;
+    top: 12px;
+    left: 244px;
+  }
+  .t1 {
+    position: absolute;
+    top: 42px;
+    left: 80px;
+    font-size: 16px;
+  }
+  .t2 {
+    position: absolute;
+    top: 42px;
+    left: 223px;
+    font-size: 16px;
+  }
+  .saludo {
+    position: absolute;
+    top: 2px;
+    left: 44px;
+  }
+  .saludo .h2 {
+    font-size: 31px;
+  }
+  .cardPadre {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .botonPlay {
+    display: none;
+  }
+}
